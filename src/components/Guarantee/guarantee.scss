@@ -1,0 +1,101 @@
+@import "src/assets/css/variables";
+@import "src/assets/css/mixins";
+
+.guarantee {
+  &__container {
+    @include media-query(1536px) {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 24px;
+    }
+    @include media-query(1024px) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  &__text {
+    grid-column: 2/8 span;
+    @include media-query(1024px) {
+      grid-column: 8 span;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__desc {
+    max-width: 756px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 24px;
+    padding-bottom: 36px;
+    @include media-query(1536px) {
+      grid-column: 2/8 span;
+      grid-template-columns: repeat(8, 1fr);
+    }
+    @include media-query(1024px) {
+      grid-column: 8 span;
+      justify-items: center;
+    }
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    &-title {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 28px;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    @include media-query(758px) {
+      grid-column: 2/6 span;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: $purple;
+    margin-bottom: 46px;
+    @include media-query(1536px) {
+      grid-column: 2/8 span;
+    }
+    @include media-query(1024px) {
+      grid-column: 8 span;
+    }
+    @include media-query(758px) {
+      grid-column: 2/8;
+      width: 200px;
+      text-align: center;
+    }
+
+    a {
+      display: inline-block;
+      padding: 16px 28px;
+      color: $white;
+      @include media-query(590px) {
+        padding: 12px 26px;
+      }
+    }
+  }
+}

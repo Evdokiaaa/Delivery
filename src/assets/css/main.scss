@@ -1,0 +1,39 @@
+@import "_variables";
+@import "_normalize";
+@import "_reset.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Заменить переменные на  ROOT
+body {
+  font-family: $font;
+  font-size: 16px;
+  color: $main-color;
+  font-weight: 400;
+}
+
+.main {
+  background: #e5e7eb;
+}
+
+.container {
+  max-width: 1536px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media screen and (max-width: 1536px) {
+    max-width: 1024px;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 768px;
+  }
+  @media screen and (max-width: 758px) {
+    max-width: 640px;
+  }
+  @media screen and (max-width: 590px) {
+    max-width: 590px;
+  }
+}

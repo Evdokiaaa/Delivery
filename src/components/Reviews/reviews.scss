@@ -1,0 +1,45 @@
+@import "./swiper.scss";
+
+.reviews {
+  padding: 72px 0;
+  @media screen and (max-width: 1536px) {
+    padding: 72px 0 120px 0;
+  }
+
+  &__title {
+    text-align: center;
+
+    font-size: 30px;
+
+    font-weight: 900;
+    line-height: 36px;
+  }
+
+  &__swipper {
+    display: flex;
+    padding-top: 32px;
+    gap: 24px;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+// .swipper {
+//   &__block {
+//     width: 625px;
+
+//     padding: 32px;
+//     background: #f9fafb;
+//     &-title {
+//       font-size: 24px;
+//       font-style: normal;
+//       font-weight: 700;
+//       line-height: 32px; /* 133.333% */
+//     }
+//     &-author {
+//       font-size: 24px;
+//       color: #6b7280;
+//       margin-top: 30px;
+//     }
+//   }
+// }

@@ -1,0 +1,108 @@
+@import "./burger.scss";
+@import "src/assets/css/variables";
+
+@mixin media-query($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+.header {
+  padding: 24px 0;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-query(590px) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo-block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &-text {
+      font-size: 24px;
+      font-weight: 900;
+      transition: 0.2s linear;
+      cursor: pointer;
+      @include media-query(758px) {
+        font-size: 20px;
+      }
+
+      &:hover {
+        color: $purple-light;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      cursor: default;
+    }
+  }
+
+  &__info {
+    display: flex;
+    @include media-query(758px) {
+      align-items: center;
+      gap: 16px;
+    }
+    @include media-query(590px) {
+      flex-direction: column;
+    }
+  }
+
+  &__price {
+    padding-right: 12px;
+    border-right: 1px solid $purple;
+    line-height: 24px;
+    text-align: end;
+    @include media-query(1024px) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    padding-left: 12px;
+
+    &-tel {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 40px;
+      @include media-query(1536px) {
+        font-size: 30px;
+      }
+
+      @include media-query(1024px) {
+        font-size: 24px;
+      }
+
+      @include media-query(758px) {
+        font-size: 20px;
+      }
+    }
+
+    &-desc {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 32px;
+      opacity: 0.97;
+      @include media-query(1536px) {
+        font-size: 20px;
+      }
+
+      @include media-query(1024px) {
+        font-size: 16px;
+        opacity: 1;
+      }
+
+      @include media-query(758px) {
+        display: none;
+      }
+    }
+  }
+}

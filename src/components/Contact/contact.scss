@@ -1,0 +1,77 @@
+@import "src/assets/css/variables";
+@import "src/assets/css/mixins";
+
+.contact {
+  padding: 0 0 70px 0;
+
+  &__container {
+    background: $white;
+    padding: 64px 0px;
+    border-radius: 10px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 24px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    @include media-query(758px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &-input {
+      width: 100%;
+      border-radius: 4px;
+      border: 2px solid #111827;
+      padding: 12px;
+
+      &::placeholder {
+        color: #9ca3af;
+      }
+    }
+
+    &-text {
+      grid-column: 1/-1;
+      //brugh
+      .contact__form-input {
+        height: 150px;
+        resize: none;
+      }
+    }
+
+    &-btn {
+      grid-column: 1/ -1;
+      border-radius: 4px;
+      background: $purple;
+      border: 2px solid $purple;
+      padding: 10px 28px;
+      color: $white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s all;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &-error {
+      color: #bf1650;
+      text-align: center;
+      display: block;
+    }
+  }
+}

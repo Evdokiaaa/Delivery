@@ -1,0 +1,35 @@
+@import "src/assets/css/variables";
+@import "src/assets/css/mixins";
+
+.custom-swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  color: $main-color;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &-author {
+    color: #6b7280;
+    font-weight: 300;
+    margin-top: auto;
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  @include media-query(590px) {
+    padding: 16px;
+    font-size: 18px;
+    line-height: 28px;
+    max-height: 470px;
+  }
+}
